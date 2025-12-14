@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #
 # National Rail Open Data client demonstrator
 # Copyright (C)2024 OpenTrainTimes Ltd.
