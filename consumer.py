@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 # National Rail Open Data client demonstrator
-# Copyright (C)2024 OpenTrainTimes Ltd.
+# Copyright (C)2024-2026 OpenTrainTimes Ltd.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -23,12 +23,14 @@ import json
 
 logging.basicConfig(format='%(asctime)s %(levelname)s\t%(message)s', level=logging.INFO)
 
+BOOTSTRAP_SERVERS = ''
 CONSUMER_KEY = ''
 CONSUMER_SECRET = ''
 GROUP_ID = ''
+TOPIC = ''
 
-if CONSUMER_KEY == '' or CONSUMER_SECRET == '':
-    logging.error("Credentials not set - please set CONSUMER_KEY and CONSUMER_SECRET to the values shown in the RDM")
+if BOOTSTRAP_SERVERS == '' or CONSUMER_KEY == '' or CONSUMER_SECRET == '' or TOPIC == '':
+    logging.error("Credentials not set - please set BOOTSTRAP_SERVERS, CONSUMER_KEY and CONSUMER_SECRET to the values shown in the RDM")
     exit(1)
 
 if GROUP_ID == '':
@@ -36,7 +38,7 @@ if GROUP_ID == '':
     exit(1)
 
 config = {
-    'bootstrap.servers': 'pkc-l6wr6.europe-west2.gcp.confluent.cloud:9092',
+    'bootstrap.servers': BOOTSTRAP_SERVERS,
     'sasl.username': CONSUMER_KEY,
     'sasl.password': CONSUMER_SECRET,
     'security.protocol': 'SASL_SSL',
@@ -47,7 +49,7 @@ config = {
 
 consumer = kafka.Consumer(config)
 
-topic = 'prod-1010-Darwin-Train-Information-Push-Port-IIII1_1-JSON'
+topic = TOPIC
 consumer.subscribe([topic])
 
 try:
