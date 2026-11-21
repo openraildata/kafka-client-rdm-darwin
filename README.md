@@ -8,6 +8,8 @@ Marketplace at the following URL:
 
 This code has been tested on Python 3.14.4, but should run on other versions of Python 3.
 
+**Note** - this example code will only process the JSON format messages, but can easily be adapted to consume XML messages.
+
 Configuration
 -------------
 
