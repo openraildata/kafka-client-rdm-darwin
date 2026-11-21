@@ -1,12 +1,14 @@
 RDM Darwin Client
 =================
 
-This repository contains a Python 3 example of how to use the Darwin v17 (Staging) messages from Darwin via the Rail
-Data Marketplace at the following URL:
+This repository contains a Python 3 example of how to use the Darwin v18 messages from Darwin via the Rail Data
+Marketplace at the following URL:
 
 * https://raildata.org.uk/dataProduct/P-e8ab4178-93b7-4219-81a9-323eab3b12ba/overview
 
 This code has been tested on Python 3.14.4, but should run on other versions of Python 3.
+
+**Note** - this example code will only process the JSON format messages, but can easily be adapted to consume XML messages.
 
 Configuration
 -------------
@@ -25,7 +27,7 @@ following fields to populate the configuration variables:
 Running the code
 ----------------
 
-Install the `confluent_kafka` library by running `pip3 install confluent_kafka`.
+Install the `confluent_kafka` library by running `pip3 install -r requirements.txt`.
 
 The `consumer.py` script will subscribe to the appropriate topic and print messages.
 
