@@ -1,8 +1,8 @@
 RDM Darwin Client
 =================
 
-This repository contains a Python 3 example of how to use the Darwin v17 (Staging) messages from Darwin via the Rail
-Data Marketplace at the following URL:
+This repository contains a Python 3 example of how to use the Darwin v18 messages from Darwin via the Rail Data
+Marketplace at the following URL:
 
 * https://raildata.org.uk/dataProduct/P-e8ab4178-93b7-4219-81a9-323eab3b12ba/overview
 
