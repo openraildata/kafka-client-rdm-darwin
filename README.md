@@ -25,7 +25,7 @@ following fields to populate the configuration variables:
 Running the code
 ----------------
 
-Install the `confluent_kafka` library by running `pip3 install confluent_kafka`.
+Install the `confluent_kafka` library by running `pip3 install -r requirements.txt`.
 
 The `consumer.py` script will subscribe to the appropriate topic and print messages.
 
